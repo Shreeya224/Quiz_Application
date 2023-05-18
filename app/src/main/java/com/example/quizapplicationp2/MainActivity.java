@@ -30,25 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ansD.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
 
-    }
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        totalQuestionsTextView=findViewById(R.id.total_question);
-        questionTextView=findViewById(R.id.question);
-        ansA=findViewById(R.id.ans_A);
-        ansA=findViewById(R.id.ans_B);
-        ansA=findViewById(R.id.ans_C);
-        ansA=findViewById(R.id.ans_D);
-        submitBtn=findViewById(R.id.submit_btn);
-
-
-        totalQuestionsTextView.setText("Total questions: "+totalQuestion);
-        loadNewQuestion();
-    }
-    @Override
-    public void onClick(View view){
         ansA.setBackgroundColor(Color.WHITE);
         ansB.setBackgroundColor(Color.WHITE);
         ansC.setBackgroundColor(Color.WHITE);
@@ -68,6 +49,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             clickedButton.setBackgroundColor(Color.MAGENTA);
         }
     }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        totalQuestionsTextView=findViewById(R.id.total_question);
+        questionTextView=findViewById(R.id.question);
+        ansA=findViewById(R.id.ans_A);
+        ansA=findViewById(R.id.ans_B);
+        ansA=findViewById(R.id.ans_C);
+        ansA=findViewById(R.id.ans_D);
+        submitBtn=findViewById(R.id.submit_btn);
+
+
+        totalQuestionsTextView.setText("Total questions: "+totalQuestion);
+        loadNewQuestion();
+    }
+
 
     void loadNewQuestion()
     {
