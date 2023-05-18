@@ -2,8 +2,8 @@ package com.example.quizapplicationp2;
 
 public class QuestionsAnswers {
     public static String question[]={
-            "Which company owns the android?",
-            "Which one is not the programming language?",
+            "Which company owns android?",
+            "Which one is not a programming language?",
             "Where do you watch videos?"
     };
     public static String choices[][]={
